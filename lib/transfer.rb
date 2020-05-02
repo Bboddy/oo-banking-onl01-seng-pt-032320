@@ -27,6 +27,6 @@ class Transfer
   end
   
   def reverse_transfer
-    if 
+    
   end
 end
