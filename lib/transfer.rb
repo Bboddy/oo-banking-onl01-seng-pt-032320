@@ -12,7 +12,7 @@ class Transfer
   end
   
   def valid_bal?
-    @sender.balance > @amount
+    sender.balance > amount
   end
   
   def execute_transaction
