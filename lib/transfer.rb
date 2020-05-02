@@ -7,7 +7,7 @@ class Transfer
     @status = "pending"
   end
   
-  def valid? #this only checks if the account is open not if the balance is right
+  def valid? #this only checks if the account is open not if the balance is avaliable 
     @sender.valid? && receiver.valid?
   end
   
