@@ -7,7 +7,7 @@ class Transfer
     @status = "pending"
   end
   
-  def valid?
+  def valid? #this only checks if the account is open not if the balance is right
     if @sender.valid? && receiver.valid?
       true
     else
@@ -15,9 +15,13 @@ class Transfer
     end
   end
   
+  def valid_bal?
+    sender.balance > amount
+  end
+  
   def execute_transaction
     if valid? && status == "pending"
-      @sender.balance -= amount
+      @sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
     else
