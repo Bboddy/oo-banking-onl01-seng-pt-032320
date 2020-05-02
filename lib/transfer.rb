@@ -11,7 +11,7 @@ class Transfer
     @sender.valid? && receiver.valid?
   end
   
-  def valid_bal?
+  def valid_bal? #this checks the balance
     sender.balance > amount
   end
   
